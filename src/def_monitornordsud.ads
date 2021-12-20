@@ -5,9 +5,11 @@ package def_monitorNordSud is
       procedure nordUnlock;
       entry sudLock;
       procedure sudUnlock;
+      function getNord return integer;
+      function getSud return integer;
     private
-      babuinsNord : integer := 0;
-      babuinsSud : integer := 0;
+      nord : integer := 0;
+      sud : integer := 0;
     end NSMonitor;
 
 end def_monitorNordSud;
