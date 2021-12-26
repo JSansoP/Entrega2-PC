@@ -1,0 +1,13 @@
+main.adb:43:27: error: expected type "Standard.Duration"
+main.adb:43:27: error: found type "Standard.String"
+main.adb:49:19: error: expected type "Standard.Duration"
+main.adb:49:19: error: found type "randRange" defined at line 10
+main.adb:54:19: error: expected type "Standard.Duration"
+main.adb:54:19: error: found type "randRange" defined at line 10
+main.adb:58:19: error: expected type "Standard.Duration"
+main.adb:58:19: error: found type "randRange" defined at line 10
+main.adb:64:19: error: expected type "Standard.Duration"
+main.adb:64:19: error: found type "randRange" defined at line 10
+main.adb:69:19: error: expected type "Standard.Duration"
+main.adb:69:19: error: found type "randRange" defined at line 10
+main.adb:82:07: error: "arrBabuins" is undefined
