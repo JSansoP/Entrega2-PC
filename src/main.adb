@@ -25,6 +25,7 @@ package Rand_Int is new ada.Numerics.Discrete_Random(randRange);
       nVegades : integer := 0;
       rand : Generator;
       aleatori: randRange;
+      dur : Duration;
    begin
       accept Start(Idx : in integer) do
          Id := Idx;
@@ -40,40 +41,47 @@ package Rand_Int is new ada.Numerics.Discrete_Random(randRange);
       for i in 0..MAX_COUNT loop
          if tipus = 'N' then
             aleatori := random(gen);
-            delay aleatori'Image;
+            dur := duration(aleatori);
+            Delay dur;
             monitor.nordLock;
             nVegades := nVegades + 1;
             Put_Line("Babui "& Id'img & " esta cruçant cap al " & tipus);
             Put_Line("Hi ha "& monitor.getNord'Img & " babuins a la corda direcció " & tipus);
             aleatori := random(gen);
-            delay aleatori;
+            dur := duration(aleatori);
+            Delay dur;
             monitor.nordUnlock;
             Put_Line("Babui "& Id'img & " baixa de la corda");
             Put_Line("Hi ha "& monitor.getNord'Img & " babuins a la corda direcció " & tipus);
             aleatori := random(gen);
-            delay aleatori;
+            dur := duration(aleatori);
+            Delay dur;
             Put_Line("Babui "& Id'img & " fa la volta.");
          else
             aleatori := random(gen);
-            delay aleatori;
+            dur := duration(aleatori);
+            Delay dur;
             monitor.sudLock;
             nVegades := nVegades + 1;
             Put_Line("Babui "& Id'img & " esta cruçant cap al " & tipus);
             Put_Line("Hi ha "& monitor.getSud'Img & " babuins a la corda direcció " & tipus);
             aleatori := random(gen);
-            delay aleatori;
+            dur := duration(aleatori);
+            Delay dur;
             monitor.sudUnlock;
             Put_Line("Babui "& Id'img & " baixa de la corda");
             Put_Line("Hi ha "& monitor.getSud'Img & " babuins a la corda direcció " & tipus);
             aleatori := random(gen);
-            delay aleatori;
+            dur := duration(aleatori);
+            Delay dur;
             Put_Line("Babui "& Id'img & " fa la volta.");
          end if;
 
       end loop;
       end Babui;
 
-type arraybabuins is array (1..BABUINS) of Babui;
+   type arraybabuins is array (1..BABUINS) of Babui;
+   arrBabuins : arraybabuins;
 begin
    --  Insert code here.
 
