@@ -4,17 +4,16 @@ use Text_IO;
 with def_monitornordsud;
 use def_monitorNordSud;
 
-with ada.numerics.discrete_random;
+with ada.numerics.Discrete_Random;
 
 procedure Main is
    type randRange is range 1..10;
-
-BABUINS : constant integer := 10; --N/2 babuins a cada costat
+   BABUINS : constant integer := 10; --N/2 babuins a cada costat
    MAX_COUNT : constant integer := 3; --Nombre de vegades que cada babui crusa
    monitor : NSMonitor;
-package Rand_Int is new ada.Numerics.Discrete_Random(randRange);
+   package Rand_Int is new ada.Numerics.Discrete_Random(randRange);
    use Rand_Int;
-      gen: Generator;
+   gen: Generator;
    task type Babui is
       entry Start(Idx: in integer);
    end Babui;
@@ -23,7 +22,7 @@ package Rand_Int is new ada.Numerics.Discrete_Random(randRange);
       Id: integer;
       tipus : Character;
       nVegades : integer := 0;
-      rand : Generator;
+
       aleatori: randRange;
       dur : Duration;
    begin
@@ -36,7 +35,7 @@ package Rand_Int is new ada.Numerics.Discrete_Random(randRange);
          end if;
 
       end Start;
-      reset(rand);
+
       Put_Line("Babui" & Id'img & " s'aixeca. Vol anar cap al "&tipus);
       for i in 0..MAX_COUNT loop
          if tipus = 'N' then
@@ -84,7 +83,7 @@ package Rand_Int is new ada.Numerics.Discrete_Random(randRange);
    arrBabuins : arraybabuins;
 begin
    --  Insert code here.
-
+   reset(gen);
 
    for Idx in 1..BABUINS loop
       arrBabuins(Idx).Start(Idx);
