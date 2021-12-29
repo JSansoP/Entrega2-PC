@@ -7,7 +7,7 @@ use def_monitorNordSud;
 with ada.numerics.Discrete_Random;
 
 procedure Main is
-   type randRange is range 1..10;
+   type randRange is range 1..3;
    BABUINS : constant integer := 10; --N/2 babuins a cada costat
    MAX_COUNT : constant integer := 3; --Nombre de vegades que cada babui crusa
    monitor : NSMonitor;
@@ -35,47 +35,50 @@ procedure Main is
          end if;
 
       end Start;
-
-      Put_Line("Babui" & Id'img & " s'aixeca. Vol anar cap al "&tipus);
-      for i in 0..MAX_COUNT loop
+      aleatori := random(gen);
+      dur := duration(aleatori);
+      Delay dur;
+      Put_Line("BON DIA som el babuí" & Id'img & " i vaig cap al " & tipus);
+      for i in 1..MAX_COUNT loop
          if tipus = 'N' then
             aleatori := random(gen);
             dur := duration(aleatori);
             Delay dur;
             monitor.nordLock;
             nVegades := nVegades + 1;
-            Put_Line("Babui "& Id'img & " esta cruçant cap al " & tipus);
-            Put_Line("Hi ha "& monitor.getNord'Img & " babuins a la corda direcció " & tipus);
+            Put_Line("***** A la corda n'hi ha" & monitor.getNord'Img & " direcció Sud *****");
+            Put_Line(tipus & Id'img & ": és a la corda i travessa cap al sud");
             aleatori := random(gen);
             dur := duration(aleatori);
             Delay dur;
             monitor.nordUnlock;
-            Put_Line("Babui "& Id'img & " baixa de la corda");
-            Put_Line("Hi ha "& monitor.getNord'Img & " babuins a la corda direcció " & tipus);
+            Put_Line("***** A la corda n'hi ha"& monitor.getNord'Img & " direcció Sud *****");
+            Put_Line(tipus & Id'img & ": és a la corda i travessa cap al sud");
             aleatori := random(gen);
             dur := duration(aleatori);
             Delay dur;
-            Put_Line("Babui "& Id'img & " fa la volta.");
+            Put_Line(tipus & Id'img & " ha arribat a la vorera");
          else
             aleatori := random(gen);
             dur := duration(aleatori);
             Delay dur;
             monitor.sudLock;
             nVegades := nVegades + 1;
-            Put_Line("Babui "& Id'img & " esta cruçant cap al " & tipus);
-            Put_Line("Hi ha "& monitor.getSud'Img & " babuins a la corda direcció " & tipus);
+            Put_Line("+++++ A la corda n'hi ha"& monitor.getNord'Img & " direcció Nord +++++");
+            Put_Line(tipus & Id'img & ": és a la corda i travessa cap al nord");
             aleatori := random(gen);
             dur := duration(aleatori);
             Delay dur;
             monitor.sudUnlock;
-            Put_Line("Babui "& Id'img & " baixa de la corda");
-            Put_Line("Hi ha "& monitor.getSud'Img & " babuins a la corda direcció " & tipus);
+            Put_Line("+++++ A la corda n'hi ha"& monitor.getNord'Img & " direcció Nord +++++");
+            Put_Line(tipus & Id'img & ": és a la corda i travessa cap al nord");
             aleatori := random(gen);
             dur := duration(aleatori);
             Delay dur;
-            Put_Line("Babui "& Id'img & " fa la volta.");
+            Put_Line(tipus & Id'img & " ha arribat a la vorera");
          end if;
 
+         Put_Line(tipus & Id'img & " : Ha fet la volta" &i'Img &" de " &MAX_COUNT'Img);
       end loop;
       end Babui;
 

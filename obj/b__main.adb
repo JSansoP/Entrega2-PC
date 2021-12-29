@@ -30,21 +30,21 @@ package body ada_main is
    E130 : Short_Integer; pragma Import (Ada, E130, "ada__strings__text_buffers_E");
    E110 : Short_Integer; pragma Import (Ada, E110, "interfaces__c__strings_E");
    E161 : Short_Integer; pragma Import (Ada, E161, "ada__streams_E");
-   E194 : Short_Integer; pragma Import (Ada, E194, "system__file_control_block_E");
+   E198 : Short_Integer; pragma Import (Ada, E198, "system__file_control_block_E");
    E167 : Short_Integer; pragma Import (Ada, E167, "system__finalization_root_E");
    E159 : Short_Integer; pragma Import (Ada, E159, "ada__finalization_E");
-   E193 : Short_Integer; pragma Import (Ada, E193, "system__file_io_E");
+   E197 : Short_Integer; pragma Import (Ada, E197, "system__file_io_E");
    E120 : Short_Integer; pragma Import (Ada, E120, "system__task_info_E");
    E008 : Short_Integer; pragma Import (Ada, E008, "ada__calendar_E");
    E006 : Short_Integer; pragma Import (Ada, E006, "ada__calendar__delays_E");
    E104 : Short_Integer; pragma Import (Ada, E104, "ada__real_time_E");
-   E189 : Short_Integer; pragma Import (Ada, E189, "ada__text_io_E");
-   E183 : Short_Integer; pragma Import (Ada, E183, "system__random_seed_E");
+   E193 : Short_Integer; pragma Import (Ada, E193, "ada__text_io_E");
+   E187 : Short_Integer; pragma Import (Ada, E187, "system__random_seed_E");
    E156 : Short_Integer; pragma Import (Ada, E156, "system__tasking__initialization_E");
    E146 : Short_Integer; pragma Import (Ada, E146, "system__tasking__protected_objects_E");
    E152 : Short_Integer; pragma Import (Ada, E152, "system__tasking__protected_objects__entries_E");
    E173 : Short_Integer; pragma Import (Ada, E173, "system__tasking__queuing_E");
-   E186 : Short_Integer; pragma Import (Ada, E186, "system__tasking__stages_E");
+   E190 : Short_Integer; pragma Import (Ada, E190, "system__tasking__stages_E");
    E144 : Short_Integer; pragma Import (Ada, E144, "def_monitornordsud_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
@@ -63,7 +63,7 @@ package body ada_main is
       begin
          F1;
       end;
-      E189 := E189 - 1;
+      E193 := E193 - 1;
       declare
          procedure F2;
          pragma Import (Ada, F2, "ada__text_io__finalize_spec");
@@ -74,7 +74,7 @@ package body ada_main is
          procedure F3;
          pragma Import (Ada, F3, "system__file_io__finalize_body");
       begin
-         E193 := E193 - 1;
+         E197 := E197 - 1;
          F3;
       end;
       declare
@@ -255,14 +255,14 @@ package body ada_main is
       Ada.Streams'Elab_Spec;
       E161 := E161 + 1;
       System.File_Control_Block'Elab_Spec;
-      E194 := E194 + 1;
+      E198 := E198 + 1;
       System.Finalization_Root'Elab_Spec;
       System.Finalization_Root'Elab_Body;
       E167 := E167 + 1;
       Ada.Finalization'Elab_Spec;
       E159 := E159 + 1;
       System.File_Io'Elab_Body;
-      E193 := E193 + 1;
+      E197 := E197 + 1;
       System.Task_Info'Elab_Spec;
       E120 := E120 + 1;
       Ada.Calendar'Elab_Spec;
@@ -275,9 +275,9 @@ package body ada_main is
       E104 := E104 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
-      E189 := E189 + 1;
+      E193 := E193 + 1;
       System.Random_Seed'Elab_Body;
-      E183 := E183 + 1;
+      E187 := E187 + 1;
       System.Tasking.Initialization'Elab_Body;
       E156 := E156 + 1;
       System.Tasking.Protected_Objects'Elab_Body;
@@ -287,7 +287,7 @@ package body ada_main is
       System.Tasking.Queuing'Elab_Body;
       E173 := E173 + 1;
       System.Tasking.Stages'Elab_Body;
-      E186 := E186 + 1;
+      E190 := E190 + 1;
       E144 := E144 + 1;
    end adainit;
 
@@ -326,10 +326,10 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\sanso\Desktop\Projectes\Babuins\obj\def_monitornordsud.o
-   --   C:\Users\sanso\Desktop\Projectes\Babuins\obj\main.o
-   --   -LC:\Users\sanso\Desktop\Projectes\Babuins\obj\
-   --   -LC:\Users\sanso\Desktop\Projectes\Babuins\obj\
+   --   C:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entrega 2\obj\def_monitornordsud.o
+   --   C:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entrega 2\obj\main.o
+   --   -LC:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entrega 2\obj\
+   --   -LC:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entrega 2\obj\
    --   -LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
    --   -static
    --   -lgnarl
