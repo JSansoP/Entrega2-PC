@@ -38,14 +38,14 @@ procedure Main is
       end Start;
       aleatori := random(gen);
       dur := duration(aleatori);
-      Delay dur; -- esperam un temps aleatori.
+      Delay dur; -- esperam un temps aleatori, per aixi estar segurs de que hi haurà intercalat.
       Put_Line("BON DIA som el babuí" & Id'img & " i vaig cap al " & tipus);
       for i in 1..MAX_COUNT loop -- per a cada vegada que ha de creuar
          if tipus = 'N' then -- si ve del nord
             aleatori := random(gen);
             dur := duration(aleatori);
             Delay dur; -- esperam per veure l'intercalat
-            monitor.nordLock; -- bloqueam el monitor
+            monitor.nordLock; -- augmentam el nombre de babuins que venen del nord a través del monitor
             nVegades := nVegades + 1; -- incrementam les vegades
             Put_Line("***** A la corda n'hi ha" & monitor.getNord'Img & " direcció Sud *****");
             Put_Line(tipus & Id'img & ": és a la corda i travessa cap al sud"); -- printeam per veure l'execuccio
