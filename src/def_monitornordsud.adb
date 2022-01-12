@@ -1,3 +1,7 @@
+-- Joan Sansó Pericàs
+-- Jonathan Salisbury Vega
+-- Video: https://youtu.be/R2SpQ6-nVPU
+
 package body def_monitorNordSud is
 
    -- Definim el Cos del monitor

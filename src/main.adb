@@ -1,3 +1,7 @@
+-- Joan Sansó Pericàs
+-- Jonathan Salisbury Vega
+-- Video: https://youtu.be/R2SpQ6-nVPU
+
 with Text_IO;
 use Text_IO;
 
@@ -52,12 +56,7 @@ procedure Main is
             aleatori := random(gen);
             dur := duration(aleatori);
             Delay dur; -- esperam per veure l'intercalat
-            monitor.nordUnlock; -- desbloqueam el monitor
-            Put_Line("***** A la corda n'hi ha"& monitor.getNord'Img & " direcció Sud *****");
-            Put_Line(tipus & Id'img & ": és a la corda i travessa cap al sud"); -- printeam per veure l'execuccio
-            aleatori := random(gen);
-            dur := duration(aleatori);
-            Delay dur; -- esperam per veure l'intercalat
+            monitor.nordUnlock; -- decrementam el nombre de babuins del monitor.
             Put_Line(tipus & Id'img & " ha arribat a la vorera");
          else
             -- si ve del sud, feim el mateix que al cas anterior pero usant l'altre monitor.
@@ -66,17 +65,12 @@ procedure Main is
             Delay dur;
             monitor.sudLock;
             nVegades := nVegades + 1;
-            Put_Line("+++++ A la corda n'hi ha"& monitor.getNord'Img & " direcció Nord +++++");
+            Put_Line("+++++ A la corda n'hi ha"& monitor.getSud'Img & " direcció Nord +++++");
             Put_Line(tipus & Id'img & ": és a la corda i travessa cap al nord");
             aleatori := random(gen);
             dur := duration(aleatori);
             Delay dur;
             monitor.sudUnlock;
-            Put_Line("+++++ A la corda n'hi ha"& monitor.getNord'Img & " direcció Nord +++++");
-            Put_Line(tipus & Id'img & ": és a la corda i travessa cap al nord");
-            aleatori := random(gen);
-            dur := duration(aleatori);
-            Delay dur;
             Put_Line(tipus & Id'img & " ha arribat a la vorera");
          end if;
 

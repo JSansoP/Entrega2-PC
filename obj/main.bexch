@@ -1,18 +1,18 @@
 [GENERATED OBJECT FILE]
 b__main.o
 [PROJECT FILES]
-C:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entrega 2\babuins.gpr
-20211229112212 ac134c4fc993ba126d8b7bf6fb15a3af
+C:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entregas\Entrega 2\babuins.gpr
+20211229112212 7d274111cd7b7f491d31c5d84def8466
 [BOUND OBJECT FILES]
-C:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entrega 2\obj\def_monitornordsud.o
-C:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entrega 2\obj\main.o
+C:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entregas\Entrega 2\obj\def_monitornordsud.o
+C:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entregas\Entrega 2\obj\main.o
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb
 b__main.ali
 [RESULTING OPTIONS]
--LC:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entrega 2\obj\
--LC:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entrega 2\obj\
+-LC:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entregas\Entrega 2\obj\
+-LC:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entregas\Entrega 2\obj\
 -LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
 -static
 -static-libgcc

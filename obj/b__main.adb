@@ -326,10 +326,10 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entrega 2\obj\def_monitornordsud.o
-   --   C:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entrega 2\obj\main.o
-   --   -LC:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entrega 2\obj\
-   --   -LC:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entrega 2\obj\
+   --   C:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entregas\Entrega 2\obj\def_monitornordsud.o
+   --   C:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entregas\Entrega 2\obj\main.o
+   --   -LC:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entregas\Entrega 2\obj\
+   --   -LC:\Users\jonny\uib\GEIN 3 - UIB\3r Curs\1r Quatrimestre\Programacio Concurrent - 21720\Practicas\Entregas\Entrega 2\obj\
    --   -LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
    --   -static
    --   -lgnarl

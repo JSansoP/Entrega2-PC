@@ -1,3 +1,7 @@
+-- Joan Sansó Pericàs
+-- Jonathan Salisbury Vega
+-- Video: https://youtu.be/R2SpQ6-nVPU
+
 package def_monitorNordSud is
 
    -- Especificam el Monitor
